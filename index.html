@@ -196,7 +196,7 @@
       <thead>
         <tr>
           <th style="width:40px;">#</th>
-          <th>商品型號</th>
+          <th>商品型號(非必填)</th>
           <th>材質</th>
           <th class="align-right">吊牌原價</th>
           <th class="align-right">分攤折扣</th>
@@ -326,12 +326,8 @@
       select.className = "material-select";
       const opts = [
         { value: "", label: "請選擇材質" },
-        { value: "10K", label: "10K" },
-        { value: "14K", label: "14K" },
-        { value: "18K", label: "18K" },
-        { value: "PT600", label: "PT600" },
-        { value: "PT900", label: "PT900" },
-        { value: "PT950", label: "PT950" },
+        { value: "K金", label: "10K" },
+        { value: "PT", label: "PT" },
         { value: "K+PT混合材質", label: "K+PT混合材質" },
         { value: "IGI 培育鑽", label: "IGI 培育鑽" }
       ];
@@ -348,7 +344,7 @@
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td class="align-right">${index}</td>
-        <td><input type="text" class="model-input" placeholder="型號" /></td>
+        <td><input type="text" class="model-input" placeholder="型號(非必填)" /></td>
         <td class="material-cell"></td>
         <td class="align-right">
           <input type="number" class="price-input" min="0" step="1" placeholder="0" style="width:100px;" />
